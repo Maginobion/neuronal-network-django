@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h1>Resultado</h1>
+    
+    {% if res %}
+        <p>{{ res }}</p>
+    {% endif %}
+
+    {% if encoded_image %}
+        <!-- Display the image using base64 encoding -->
+        <img src="data:image/jpeg;base64,{{ encoded_image }}" width="400px" alt="Processed Image">
+    {% endif %}
+
+</body>
+</html>

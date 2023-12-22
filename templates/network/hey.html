@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .btn{
+        margin: 10px;
+    }
+    .btn-success{
+        background-color: greenyellow;
+        padding: 10px;
+    }
+    .btn-primary{
+        background-color: skyblue;
+    }
+    </style>
+</head>
+<body>
+    <form action="success" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        <input type="file" name="image" accept="image/*" class="btn btn-success">
+        <input type="submit" value="Enviar" class="btn btn-primary">
+    </form>
+</body>
+</html>
