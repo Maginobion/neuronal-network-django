@@ -59,8 +59,6 @@ def process_image(request):
             if result[0][0] == 2:
                 res = "Es una hoja enferma"
 
-            # Assuming 'output' is the processed image, convert it to bytes
-
             _, buffer = cv2.imencode('.jpg', image_raw)
             image_bytes = buffer.tobytes()
 
